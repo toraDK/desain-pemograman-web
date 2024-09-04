@@ -1,0 +1,30 @@
+body{
+    background: url(../../img/background.webp);
+    font: 15px/30px sans-serif;
+}
+
+.container{
+    background-color: #F5F5F5;
+    width: 1000px;
+    margin: 150px auto;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.sidebar{
+    flex: 0.5;
+    margin: 0 10px;
+}
+
+.content{
+    flex: 2;
+    margin: 0 10px;
+}
+
+.sidebar2{
+    flex: 0.5;
+    margin: 0 10px;
+}
