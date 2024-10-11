@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styleSlide.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#kotak2").hide(); // Menyembunyikan kotak2 saat halaman pertama kali dibuka
+
+            $("#flip").click(function() {
+                if($("#kotak2").is(":visible")) {
+                    $("#kotak2").slideUp("slow"); // Slide up jika terlihat
+                } else {
+                    $("#kotak2").slideDown("slow"); // Slide down jika tersembunyi
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="flip">Klik untuk Efek Slide</div>
+    <div id="kotak2" >Selamat Pagi</div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Belajar Variabel dalam Javascript</title>
+</head>
+<body>
+    <script>
+        var name = "Javascript";
+        var visitorCount = 50322;
+        var isActive = true;
+
+        alert("Selamat datang di " + name);
+
+        document.write("Nama Situs: " + name + "<br>");
+        document.write("Jumlah Pengunjung: " + visitorCount + "<br>");
+        document.write("Status Aktif: " + isActive + "<br>");
+
+        // Contoh menggunakan innerHTML
+        var element = document.getElementById("myDiv");
+        if (element) {
+            element.innerHTML = "Nama Situs: " + name;
+        } else {
+            console.log("Elemen dengan id 'myDiv' tidak ditemukan");
+        }
+    </script>
+
+    <div id="myDiv"></div>
+</body>
+</html>

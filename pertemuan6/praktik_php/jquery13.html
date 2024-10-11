@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styleSlideShow.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        var i = 0;
+
+        $(document).ready(function() {
+            // Sembunyikan semua gambar dan judul saat halaman dimuat
+            $('#slider img, .slidertitle').hide();
+
+            // Tampilkan gambar pertama
+            showNextImage();
+
+            // Panggil fungsi showNextImage() setiap 3000 milidetik (3 detik)
+            setInterval(showNextImage, 3000);
+        });
+
+        function showNextImage() {
+            // Increment indeks gambar
+            i++;
+
+            // Jika indeks melebihi jumlah gambar, reset ke 1 (karena gambar mulai dari 1)
+            if (i > 3) {
+                i = 1;
+            }
+
+            // Sembunyikan semua gambar dan judul sebelum menampilkan yang baru
+            $('#slider img, .slidertitle').hide();
+
+            // Tampilkan gambar dan judul dengan efek fade
+            $('#sliderImage' + i).fadeIn(1100).delay(1100).fadeOut(1100);
+            $('#title' + i).fadeIn(1100).delay(1100).fadeOut(1100);
+        }
+    </script>
+</head>
+<body>
+    <div id="slider">
+        <img id="sliderImage1" src="img/1.jpg" alt="Gambar 1" width="500px">
+        <div class="slidertitle" id="title1">Gambar 1</div>
+
+        <img id="sliderImage2" src="img/2.jpg" alt="Gambar 2" width="500px">
+        <div class="slidertitle" id="title2">Gambar 2</div>
+
+        <img id="sliderImage3" src="img/3.jpg" alt="Gambar 3" width="500px">
+        <div class="slidertitle" id="title3">Gambar 3</div>
+    </div>
+</body>
+</html>
